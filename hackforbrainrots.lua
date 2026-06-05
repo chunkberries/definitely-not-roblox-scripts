@@ -1,4 +1,5 @@
 -- Game link: https://www.roblox.com/games/137069154816703/Hack-Vault-for-Brainrots
+-- Shorted ver: loadstring(game:HttpGet("https://raw.githubusercontent.com/chunkberries/definitely-not-roblox-scripts/refs/heads/main/hackforbrainrots.lua"))()
 
 local Player = game.Players.LocalPlayer
 local UserInputService = game:GetService("UserInputService")
@@ -1209,7 +1210,7 @@ Info.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Info.BackgroundTransparency = 1.000
 Info.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Info.BorderSizePixel = 0
-Info.Position = UDim2.new(0.0191881005, 0, 0.0613469593, 0)
+Info.Position = UDim2.new(0.0191881005, 0, 0.0513469593, 0)
 Info.Size = UDim2.new(0, 368, 0, 66)
 Info.Font = Enum.Font.GothamBold
 Info.Text = "When Auto Farm is enabled you will teleport to the best zone in the game. When you pick a brainrot up you will automatically teleport back to your base. Then when you place it down the cycle repeats."
@@ -1218,6 +1219,13 @@ Info.TextScaled = true
 Info.TextSize = 14.000
 Info.TextWrapped = true
 Info.TextXAlignment = Enum.TextXAlignment.Left
+
+local AutoFarmWarnining = Info:Clone()
+AutoFarmWarnining.Parent = ScrollingFrame
+AutoFarmWarnining.Text = "[WARNING] When teleporting you might encounter lag because of the game needing to load everything in."
+AutoFarmWarnining.TextColor3 = Color3.new(255, 0, 0)
+AutoFarmWarnining.Position = UDim2.new(0.0191881005, 0, 0.091, 0)
+AutoFarmWarnining.Size = UDim2.new(0, 368, 0, 30)
 
 Title.Name = "Title"
 Title.Parent = MainFrame
@@ -1233,6 +1241,13 @@ Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextScaled = true
 Title.TextSize = 14.000
 Title.TextWrapped = true
+
+local CredLabel = Title:Clone()
+CredLabel.Parent = MainFrame
+CredLabel.Position = UDim2.new(0.185, 0, 0.18, 0)
+CredLabel.Size = UDim2.new(0.4, 0, 0.05, 0)
+CredLabel.Text = "made by chunkberries"
+CredLabel.AnchorPoint = Vector2.new(0.5, 0.5)
 
 CollectAllBtn.Name = "CollectAllBtn"
 CollectAllBtn.Parent = MainFrame.ScrollingFrame
